@@ -8,5 +8,4 @@ and the Pac-Man game clone was all self implemented using Java.
 Snake and Pong are javascript game clones using HTML5 canvas.
 ipadApp-js is an ipad application for the regent street cinema written in
 javascript using jQuery and jQueryMobile.
-Inside the iOS directory is two native iphone applications written in Objective-C.
 python-stuff contains small but useful scripts written in python.
