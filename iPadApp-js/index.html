@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Regent Street Cinema App</title>
+		<!-- Gagondeep Srai Mobile App Template -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/themes/AppTheme.min.css" />
+  		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<script src="https://checkout.stripe.com/checkout.js"></script>
+
+		<!-- our stylesheets and scripts -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/wordSearch.css">
+	</head>
+<!-- Ipad app Gagondeep Srai & Devesh Rathod -->
+	<body>
+		<!-- Home Page -->
+		<div data-role="page" data-theme="a" id="HomePage">
+			<!-- a page is a view in mobile app terms -->
+			<div data-role="header" data-position="fixed" data-theme="a" id="header">
+				<!-- Header HTML should go here -->
+				<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+				<button
+				class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+				ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+				style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+				<div data-role="navbar" id="navMenuHome">
+				    <ul><!-- onclick="hideNavMenu()" hides the nav menu when you transition to a new page, better UX -->
+				        <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+				        <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+				        <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+				        <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+				        <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+				        <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+				    </ul>
+				</div><!-- /navbar -->
+			</div>
+			<div role="main" class="ui-content">
+				<!-- main content HTML should go here -->
+				<div class="IpadPageContent">
+					<h3 id="HomepageTitle">The Regent Street Cinema Campaign</h3>
+					<iframe width="700" height="400" src="https://www.youtube.com/embed/jxBQbnXGCm4" frameborder="0" allowfullscreen></iframe>
+					<p>
+						The University of Westminster has launched a major campaign to restore one of the most important cinemas in Britain to its former glory, evoking its 19th century heritage, while looking to the future. As a major industry landmark and birthplace of British Cinema, the restored Regent Street Cinema and state-of-the-art auditorium will be open to the public as a unique arts venue for screenings, lectures, workshops and events, in the heart of London's West End. 
+						<span id="homepageSubParagraph1"></span>
+						<a href="#" id="homepageParagraphButton">more...</a>
+					</p>	
+					<div id="homepageSlider" style="display:inline-block; margin-right: 10px;">
+						<ul class="slides">
+							<li class="slide"><img src="res/img/sliderImg1.jpg" width="315" height="200"></li>
+							<li class="slide"><img src="res/img/sliderImg2.jpg" width="315" height="200"></li>
+							<li class="slide"><img src="res/img/sliderImg3.jpg" width="315" height="200"></li>
+							<li class="slide"><img src="res/img/sliderImg1.jpg" width="315" height="200"></li>
+						</ul>
+					</div>
+					<div id="twitterfeed" style="display:inline-block;">
+						<!--TWITTER FEED-->
+						<article>
+		  				<h2><a class="twitter-timeline" data-chrome="nofooter transparent" width="340" height="220" href="https://twitter.com/RegentStCinema" data-widget-id="477382756477853698">
+		  				Tweets by @RegentStCinema</a></h2>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </article>  
+					</div>	
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<!-- Footer HTML should go here -->
+				<div class="footer_text" style="background-color: white;"><a href="#UpcomingEventsPage">Upcoming Events</a></div>
+			</div>
+		</div>
+		<!-- Our Cinema Page -->
+		<div data-role="page" data-theme="a" id="OurCinemaPage">
+			<!-- a page is a view in mobile app terms -->
+			<div data-role="header" data-position="fixed" data-theme="a" id="header">
+				<!-- Header HTML should go here -->
+				<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+				<button
+				class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+				ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+				style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+				<div data-role="navbar" id="navMenuOC">
+				    <ul>
+				        <li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+				        <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+				        <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+				        <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+				        <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+				        <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+				    </ul>
+				</div><!-- /navbar -->
+			</div>
+			<div role="main" class="ui-content">
+				<!-- main content HTML should go here -->
+				<div class="IpadPageContent">
+					<h1 id="OurCinemaTitle">Our Heritage</h1>
+					<p style="margin: 3px 3px 0 50px;">swipe left to go forward and swipe right to go backward.</p>
+						<div id="SliderWidget">
+							<ul class="slides">
+								<li class="slide"><img src="res/img/history/1.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/2.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/3.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/4.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/5.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/6.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/7.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/8.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/9.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/10.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/11.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/12.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/13.png" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/14.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/15.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/16.jpg" width="400px" height="300px"></li>
+								<li class="slide"><img src="res/img/history/17.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/18.jpg" width="600px" height="400px"></li>
+								<li class="slide"><img src="res/img/history/19.jpg" width="600px" height="400px"></li>
+							</ul>
+							<h3 id="sliderTitle">August 6, 1838</h3>
+							<img id="sliderBtnLeft" src="res/img/sliderBtn1.png" width="60px" height="60px">
+							<img id="sliderBtnRight" src="res/img/sliderBtn2.png" width="60px" height="60px">
+						</div>
+						<p id="sliderText">
+							The Polytechnic Institute opens at 309 Regent Street.
+						</p>
+						<div>
+							<h2 style="margin: 10px 5px 0 0;">Our heritage</h2>
+							<h4 style="margin: 5px 3px 0 0;">Playing host to invention and wonder</h4>
+							<p>
+								The Polytechnic Institution was founded in 1838 and rapidly established itself as a London landmark known for demonstrating technical innovations of the day. Visitors could be submerged underwater in the newly developed diving bell or have their portrait taken in Europe's first photography studio. The Polytechnic became the University of Westminster in 1992 and today we boast a vibrant learning environment attracting more than 20,000 students from over 150 nations. <br/>
+								Explore the timeline above and find out more about these exciting landmark events and the development of British cinema.
+							</p>	
+						</div>
+					
+				</div>
+			</div><!-- /main -->
+			<div data-role="footer" data-position="fixed">
+				<!-- Footer HTML should go here -->
+				<div class="footer_text" style="background-color: white;">
+					<span>
+						Find out about opportunites to <a href="#NameSeat1">name a seat</a> and help
+						secure the future of the Regent Street Cinema.
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- Name a Seat Page -->
+		    <!-- first page -->
+	    <div data-role="page" data-theme="a" id="NameSeat1">
+	    	<!-- a page is a view in mobile app terms -->
+	      <div data-role="header" data-position="fixed" data-theme="a" id="header">
+	        <!-- Header HTML should go here -->
+	        <img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+	        <button
+	        class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+	        ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+	        style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+	        <div data-role="navbar" id="navMenuNAS1">
+	            <ul>
+	            	<li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+	                <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+	                <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+	                <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+	                <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+	                <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+	            </ul>
+	        </div><!-- /navbar -->
+	      </div>
+	      <div role="main" class="ui-content">
+	        <!-- main content HTML should go here -->
+	        <div class="IpadPageContent">
+	          <h1 id="FindUsTitle">Name a Seat</h1>
+	            <p>
+	              Support the Regent Street Cinema in it's journey to transform back into a landmark venue for film and the future of film education.
+	            </p>
+	            <p>
+	              To raise money to restore the Cinema, we are offering supporters the chance to name a seat and join 200 others in raising &pound;200,000 towards securing the future of the Cinema.
+	            </p>
+	            <div id="SeatingPlanText">
+	              <p>
+	                <strong>
+	                  You can name a seat for &pound;750, or choose one of our exclusive Director's seats for &pound;1500. Your gift will go directly towards the cost of restoration and will help secure the future of this historic venue.
+	                </strong>
+	              </p>
+	            </div>
+	            <img id="SeatingPlanImg"  src="res/img/seatingPlan.png" alt="Seating plan of the regents street cinema." height="430px" width="420px">
+	            <p>
+	              To mark your support you will receive:
+	              <ul>
+	                <li>A personalised plaque attached to the seat bearing your chosen name for the lifetime of the seat.</li>
+	                <li>Acknowledgement of your support on our website and in publications.</li>
+	                <li>An invitation to view your seat.</li>
+	                <li>One year membership of the Regent Street Cinema.</li>
+	              </ul>
+	            </p>
+	        </div>
+	      </div><!-- /main -->
+	      <div data-role="footer" data-position="fixed">
+	        <!-- Footer HTML should go here -->
+	        <div class="footer_text" style="background-color: white;">
+	          <a href="#NameSeat2" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-carat-r" style="background-color: #741b47; color: white; border-color: #741b47; margin-left: 620px;">Booking Page</a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- second page -->
+	    <div data-role="page" data-theme="a"  id="NameSeat2">
+	    	<!-- a page is a view in mobile app terms -->
+	      <div data-role="header" data-position="fixed" data-theme="a" id="header">
+	        <!-- Header HTML should go here -->
+	        <img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+	        <button
+	        class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+	        ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+	        style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+	        <div data-role="navbar" id="navMenuNAS2">
+	            <ul>
+	                <li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+	                <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+	                <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+	                <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+	                <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+	                <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+	            </ul>
+	        </div><!-- /navbar -->
+	      </div>
+	      <div role="main" class="ui-content">
+	        <!-- main content HTML should go here -->
+	        <div class="IpadPageContent">
+	          <a href="#NameSeat1" id="BackBtn" class="footer-button-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background-color: #741b47; color: white; border-color: #741b47;">Back</a>
+	          <button id="Help" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-info" style="background-color: #741b47; color: white; border-color: #741b47; margin-left: 630px;">Help</button>
+	          <h1 id="NameASeatTitle">Book a Seat</h1>
+	          <div id="seatWidget" style="width: 425px; margin: 0 auto;">
+
+	          </div>
+	          <p id="Info"style="width: 330px; margin: 0 auto;"></p>
+	          <div style="width: 200px; margin: 0 auto;">
+	            <button id="ClearSel" style="background-color: #741b47; color: white; border-color: #741b47;">clear selection</button>
+	          </div>
+	          <div id="seatForm" style="width: 410px; margin: 0 auto;">
+	            <p>
+	              <label for="name">First name</label> 
+	              <input name="name" value="" id="nameOfSeat" type="text" placeholder="Name on Seat" />
+	            </p>
+	            <p>
+	              <label for ="emailNameASeat">Email</label>
+	              <input name="emailNameASeat" id="emailNameSeat" value="" type = "email" placeholder="example@domain.com" >
+	            </p>
+	            <p>
+					<label for="SeatType">Seat Type: Director Seat?</label>
+					<select name="SeatType" id="SeatType" data-role="slider">
+					    <option value="standard">No</option>
+					    <option value="director">Yes</option>
+					</select> 
+	            </p>
+	            <button style="width: 82px; height:32px; margin: 0 auto; padding: 0 0 0 0;" id="seatPayButton">
+	              <img src="res/img/paypal.gif" width="80px" height="30">
+	            </button>
+	          </div>
+	        </div>
+	      </div><!-- /main -->
+	      <div data-role="footer" data-position="fixed">
+	        <!-- Footer HTML should go here -->
+	        <div class="footer_text" style="background-color: white;">
+	          
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- third page -->
+	    <div data-role="page" data-theme="a" id="NameSeat3">
+	    	<!-- a page is a view in mobile app terms -->
+	      <div data-role="header" data-position="fixed" data-theme="a" id="header">
+	        <!-- Header HTML should go here -->
+	        <img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+	        <button
+	        class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+	        ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+	        style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+	        <div data-role="navbar" id="navMenuNAS3">
+	            <ul>
+	                <li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+	                <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+	                <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+	                <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+	                <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+	                <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+	            </ul>
+	        </div><!-- /navbar -->
+	      </div>
+	      <div role="main" class="ui-content">
+	        <!-- main content HTML should go here -->
+	        <div class="IpadPageContent">
+	          <h1 id="ConfirmationTitle">Book a Seat: Confirmation</h1>
+	          <div id="confirmationBox" style="border: 3px solid black; width: 600px; padding: 5px 10px 10px 10px; margin-top: 20px;">
+	            <h3>Success!</h3>
+	            <p>
+	              Thank you for your support towards the transformation of the Regent Street Cinema.
+	            </p>
+	            <p>
+	              Your order confirmation code is: <a href="#">#204-4981088-5481158</a>
+	            </p>
+	            <br>
+	            <p>
+	              An email will be sent to the provided address. 
+	            </p>
+	            <p>Thank you for securing the future of British Cinema.</p>
+	            <p>Signed: A. Signature</p>
+	            <img src="res/img/ASignature.jpg" height="62px" width="314px">
+	          </div>
+	        </div>
+	      </div><!-- /main -->
+	      <div data-role="footer" data-position="fixed">
+	        <!-- Footer HTML should go here -->
+	        <div class="footer_text" style="background-color: white;">
+	          <a href="#NameSeat1" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-back" style="background-color: #741b47; color: white; border-color: #741b47; margin-left: 620px;">Name a Seat</a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- WordSearch Page -->
+	    <div data-role="page" data-theme="a" id="WordSearchPage">
+	    	<!-- a page is a view in mobile app terms -->
+	      <div data-role="header" data-position="fixed" data-theme="a" id="header">
+	        <!-- Header HTML should go here -->
+	        <img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+	        <button
+	        class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+	        ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+	        style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+	        <div data-role="navbar" id="navMenuWord">
+	            <ul>
+	            	<li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+	                <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+	                <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+	                <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+	                <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+	                <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+	            </ul>
+	        </div><!-- /navbar -->
+	      </div>
+	      <div role="main" class="ui-content">
+	        <!-- main content HTML should go here -->
+	        <div class="IpadPageContent">
+	        <div data-inline="true">
+	        	<h1 id="WordSearchTitle" style="display:inline;">Cinema Word Search</h1>
+	        	<button id="HelpWS" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-info" style="background-color: #741b47; color: white; border-color: #741b47; margin: 0 0 0 110px;">Help</button>
+	        </div>
+				<div id="GameWidget" style="width: 600px; margin: 0 auto;">
+
+				</div>
+				<div id="wordContainter" style="width: 300px; margin: 0 auto;">
+					<div id="viewDiv">
+						<p><a id="viewBlacony" class="viewArtefact" href="#popupBalcony" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewDecoration" class="viewArtefact" href="#popupDecoration" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewFloor" class="viewArtefact" href="#popupFloor" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewLight" class="viewArtefact" href="#popupLight" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewOrganpipes" class="viewArtefact" href="#popupOrganpipes" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewProjection" class="viewArtefact" href="#popupProjection" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewProscenium" class="viewArtefact" href="#popupProscenium" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewRailings" class="viewArtefact" href="#popupRailings" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewSeating" class="viewArtefact" href="#popupSeating" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+						<p><a id="viewStage" class="viewArtefact" href="#popupStage" data-rel="popup" data-transition="pop" data-position-to="window">View &nbsp;&nbsp;&nbsp;&nbsp; ></a></p>
+					</div>
+					<div id="wordsDiv">
+						<p id="wordBALCONY"><strong>BALCONY</strong></p>
+						<p id="wordDECORATION"><strong>DECORATION</strong></p>
+						<p id="wordFLOOR"><strong>FLOOR</strong></p>
+						<p id="wordLIGHT"><strong>LIGHT</strong></p>
+						<p id="wordORGANPIPES"><strong>ORGANPIPES</strong></p>
+						<p id="wordPROJECTION"><strong>PROJECTION</strong></p>
+						<p id="wordPROSCENIUM"><strong>PROSCENIUM</strong></p>
+						<p id="wordRAILINGS"><strong>RAILINGS</strong></p>
+						<p id="wordSEATING"><strong>SEATING</strong></p>
+						<p id="wordSTAGE"><strong>STAGE</strong></p>
+					</div>
+
+					<div data-role="popup" id="popupBalcony" style="width:400px; background-color: #741b47; color: white;">
+						<h3 class="ArtifactHeading">Balcony</h3>
+				        <p>
+				        	The original balcony was removed in 1894 when Hogg re-developed the theatre into a more general 'hall', with gallery seating now running round all 4 sides of the room. This was, in turn, removed in 1926 to be replaced with a balcony in the art deco style.
+				        </p>
+				        <img class="ArtifactImage" src="res/img/Balcony.jpg" alt="Balcony." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupDecoration" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Wall decoration</h3>
+				        <p>
+				        	The majority of images of 1848 theatre of the Royal Polytechnic Institution are line drawings, and so give us little clue to the decoration. However two watercolours of 1882 show a richly decorated room with green walls and features picked out in red and gold. Black and white photographs of the auditorium around the turn-of-the-century appear to show that all these colours have gone in the 1894 refurbishment. 
+				        </p>
+				        <img class="ArtifactImage" src="res/img/wallDecoration.jpg" alt="Wall Decoration." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupFloor" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Floor</h3>
+				        <p>
+				        	The floor level of the 1848 theatre was lower, with the seating descending from the entrance to the stage. Underneath the stage was a pit that was used to create the 'Pepper's Ghost' illusion. 
+				        </p>
+				        <img class="ArtifactImage" src="res/img/Floor.jpg" alt="Floor." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupLight" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Ceiling Light</h3>
+				        <p>
+				        	When the cinema opened as a magic lantern theatre in 1848, it would have had no electric light. The primary means of lighting the theatre was from a skylight.
+				        </p>
+				        <img class="ArtifactImage" src="res/img/CeilingLight.jpg" alt="Ceiling Light." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupOrganpipes" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Organ Pipes</h3>
+				        <p>
+				        	The pipes for the cinema organ are inside a wooden chamber at the back of the stage and this is where the sound is produced. When a key is pressed on the console, an electrical current carries the information to the pipes. This controls the flow of air through the pipes, and produces sound. 
+				        </p>
+				        <img class="ArtifactImage" src="res/img/OrganPipes.jpg" alt="Organ Pipes." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupProjection" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Projection room</h3>
+				        <p>
+				        	The original 1848 projection or 'manipulating room' was at the back of the auditorium, between the two levels of seating. This was used for projecting Magic Lantern slides onto a large circular screen on the stage. The projecting room was removed during the 1894 refurbishment. 
+				        </p>
+				        <img class="ArtifactImage" src="res/img/ProjectionRoom.JPG" alt="Projection Room." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupProscenium" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Proscenium</h3>
+				        <p>
+				        	A proscenium arch is the frame around a theatre stage. The victorian Royal Polytechnic Institution theatre had a decorative and richly coloured proscenium arch, but this was removed in 1894, when the auditorium was converted into a meeting hall. However a new one was installed during the 1926 renovations, introducing the art deco styling that can still be seen today.
+				        </p>
+				        <img class="ArtifactImage" src="res/img/ProsceniumArch.jpg" alt="Proscenium Arch." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupRailings" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Iron Railings</h3>
+				        <p>
+				        	In 1894 a gallery was installed around the auditorium. This replaced the original tiered seating of the 1848 theatre and turned it more into a meeting hall for lectures, debates, teaching and even boxing.
+				        </p>
+				        <img class="ArtifactImage" src="res/img/ironRailings.jpg" alt="Iron railing behind the stage." height="200px" width="366px">
+					</div>
+					<div data-role="popup" id="popupSeating" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Seating</h3>
+				        <p>
+				        	The 1848 theatre of the Royal Polytechnic Institution was purpose-built for magic lantern shows and held 1500 people, with shows often running twice a day. However the sales particular of 1881 described it as holding 'between 800 and 900 persons'. Quintin Hogg bought the building and converted it into a meeting hall, seating 1100 people, with an additional 150 on the platform. The seating numbers after the 1894 refurbishment - and therefore at the time of the Lumiere's Cinematographe screening - aren't confirmed but are believed to be roughly the same. We do know however that the audience were seated on loose wooden chairs, rather than the fixed plush seats of today.
+				        </p>
+				        <img class="ArtifactImage" src="res/img/Seating.jpg" alt="Seating." height="200px" width="200px">
+					</div>
+					<div data-role="popup" id="popupStage" style="width:400px; background-color: #741b47; color: white;">
+						<h3>Stage</h3>
+				        <p>
+				        	The magic lantern slides used at the Royal Polytechnic Institution were larger than usual slides, at around 20cm x 15cm. The image was projected onto a circular oil canvas screen with a diameter of almost 9m, at a distance of 11m from the back of the theatre. This was achieved through the use of oxyhydrogen - or limelight as it was commonly known.  
+				        </p>
+				        <img class="ArtifactImage" src="res/img/Stage.jpg" alt="Stage." height="200px" width="366px">
+					</div>
+				</div>
+	        </div>
+	      </div><!-- /main -->
+	      <div data-role="footer" data-position="fixed">
+	        <!-- Footer HTML should go here -->
+	        <div class="footer_text" style="background-color: white;">
+	          	<a href="#POIpage" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-carat-r" style="background-color: #741b47; color: white; border-color: #741b47; margin-left: 600px;" id="POIbuttonWS">Artefacts</a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- Points of Interest page -->
+	    <div data-role="page" data-theme="a" id="POIpage">
+			<!-- a page is a view in mobile app terms -->
+			<div data-role="header" data-position="fixed" data-theme="a" id="header">
+				<!-- Header HTML should go here -->
+				<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+				<button
+				class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+				ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+				style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+				<div data-role="navbar" id="navMenuPOI">
+				    <ul> 
+				    	<li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+				        <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+				        <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+				        <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+				        <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+				        <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+				    </ul>
+				</div><!-- /navbar -->
+			</div>
+			<div role="main" class="ui-content">
+				<!-- main content HTML should go here -->
+				<div class="IpadPageContent">
+
+					<h1 id="FindUsTitle">Artefacts</h1>
+					<div data-role="tabs" id="tabs" width="190" height="27">
+						<div data-role="navbar">
+							<ul>
+								<li><a href="#POIpublic" data-ajax="false" class="ui-btn-active">Public</a></li>
+								<li><a href="#POIstudent" data-ajax="false">Student</a></li>
+							</ul>
+						</div>
+						<div id="POIpublic">
+							<div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+							    <div data-role="collapsible" data-collapsed="false">
+							        <h3>Organ Pipes</h3>
+							        <p>
+							        	The pipes for the cinema organ are inside a wooden chamber at the back of the stage and this is where the sound is produced. When a key is pressed on the console, an electrical current carries the information to the pipes. This controls the flow of air through the pipes, and produces sound. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/OrganPipes.jpg" alt="Organ Pipes." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Balcony</h3>
+							        <p>
+							        	The original balcony was removed in 1894 when Hogg re-developed the theatre into a more general 'hall', with gallery seating now running round all 4 sides of the room. This was, in turn, removed in 1926 to be replaced with a balcony in the art deco style.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Balcony.jpg" alt="Balcony." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Seating</h3>
+							        <p>
+							        	The 1848 theatre of the Royal Polytechnic Institution was purpose-built for magic lantern shows and held 1500 people, with shows often running twice a day. However the sales particular of 1881 described it as holding 'between 800 and 900 persons'. Quintin Hogg bought the building and converted it into a meeting hall, seating 1100 people, with an additional 150 on the platform. The seating numbers after the 1894 refurbishment - and therefore at the time of the Lumiere's Cinematographe screening - aren't confirmed but are believed to be roughly the same. We do know however that the audience were seated on loose wooden chairs, rather than the fixed plush seats of today.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Seating.jpg" alt="Seating." height="200px" width="200px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Proscenium</h3>
+							        <p>
+							        	A proscenium arch is the frame around a theatre stage. The victorian Royal Polytechnic Institution theatre had a decorative and richly coloured proscenium arch, but this was removed in 1894, when the auditorium was converted into a meeting hall. However a new one was installed during the 1926 renovations, introducing the art deco styling that can still be seen today.
+							        </p>
+							        
+							        <img class="PointsOfInterestImage" src="res/img/ProsceniumArch.jpg" alt="Proscenium Arch." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Wall decoration</h3>
+							        <p>
+							        	The majority of images of 1848 theatre of the Royal Polytechnic Institution are line drawings, and so give us little clue to the decoration. However two watercolours of 1882 show a richly decorated room with green walls and features picked out in red and gold. Black and white photographs of the auditorium around the turn-of-the-century appear to show that all these colours have gone in the 1894 refurbishment. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/wallDecoration.jpg" alt="Wall Decoration." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Ceiling Light</h3>
+							        <p>
+							        	When the cinema opened as a magic lantern theatre in 1848, it would have had no electric light. The primary means of lighting the theatre was from a skylight.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/CeilingLight.jpg" alt="Ceiling Light." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Floor</h3>
+							        <p>
+							        	The floor level of the 1848 theatre was lower, with the seating descending from the entrance to the stage. Underneath the stage was a pit that was used to create the 'Pepper's Ghost' illusion. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Floor.jpg" alt="Floor." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Stage</h3>
+							        <p>
+							        	The magic lantern slides used at the Royal Polytechnic Institution were larger than usual slides, at around 20cm x 15cm. The image was projected onto a circular oil canvas screen with a diameter of almost 9m, at a distance of 11m from the back of the theatre. This was achieved through the use of oxyhydrogen - or limelight as it was commonly known.  
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Stage.jpg" alt="Stage." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Projection room</h3>
+							        <p>
+							        	The original 1848 projection or 'manipulating room' was at the back of the auditorium, between the two levels of seating. This was used for projecting Magic Lantern slides onto a large circular screen on the stage. The projecting room was removed during the 1894 refurbishment. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/ProjectionRoom.JPG" alt="Projection Room." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Iron Railings</h3>
+							        <p>
+							        	In 1894 a gallery was installed around the auditorium. This replaced the original tiered seating of the 1848 theatre and turned it more into a meeting hall for lectures, debates, teaching and even boxing.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/ironRailings.jpg" alt="Iron railing behind the stage." height="200px" width="366px">
+							    </div>
+							</div><!-- end of accordion 1 -->
+						</div>
+						<div id="POIstudent">
+							<div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+							    <div data-role="collapsible" data-collapsed="false">
+							        <h3>Organ Pipes</h3>
+							        <p>
+							        	The pipes for the cinema organ are inside a wooden chamber at the back of the stage and this is where the sound is produced. When a key is pressed on the console, an electrical current carries the information to the pipes. This controls the flow of air through the pipes, and produces sound. The vibrato effect is created by manually shaking the air source. The sound produced by the organ is not amplified at all by electricity. Instead the volume is controlled by the flaps at the front of the chamber. As well as the pipes, there are real instruments inside the chamber such as a glockenspiel and sleigh bells. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/OrganPipes.jpg" alt="Organ Pipes." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Balcony</h3>
+							        <p>
+							        	The original balcony was removed in 1894 when Hogg re-developed the theatre into a more general "hall", with gallery seating now running round all 4 sides of the room. This was, in turn, removed in 1926 to be replaced with a balcony in the art deco style.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Balcony.jpg" alt="Balcony." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Seating</h3>
+							        <p>
+							        	The 1848 theatre of the Royal Polytechnic Institution was purpose-built for magic lantern shows and held 1500 people, with shows often running twice a day. However the sales particular of 1881 described it as holding 'between 800 and 900 persons'. Quintin Hogg bought the building and converted it into a meeting hall, seating 1100 people, with an additional 150 on the platform. The seating numbers after the 1894 refurbishment - and therefore at the time of the Lumiere's Cinematographe screening - aren't confirmed but are believed to be roughly the same. We do know however that the audience were seated on loose wooden chairs, rather than the fixed plush seats of today.
+
+										As audiences came to expect comfort as much as spectacle, the number of seats in the cinema reduced. After the 1926 rebuilding, the cinema only seated 610. By comparison, the 1928 Empire Theatre in Leicester Square seated 3300. Further seats seem to have been removed with each successive refurbishment and by the time it closed as the Regent Theatre in 1979, the auditorium seated only 517. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Seating.jpg" alt="Seating." height="200px" width="200px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Proscenium</h3>
+							        <p>
+							        	A proscenium arch is the frame around a theatre stage. The victorian Royal Polytechnic Institution theatre had a decorative and richly coloured proscenium arch, but this was removed in 1894, when the auditorium was converted into a meeting hall. However a new one was installed during the 1926 renovations, introducing the art deco styling that can still be seen today.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/ProsceniumArch.jpg" alt="Proscenium Arch." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Wall decoration</h3>
+							        <p>
+							        	The majority of images of 1848 theatre of the Royal Polytechnic Institution are line drawings, and so give us little clue to the decoration. However two watercolours of 1882 show a richly decorated room with green walls and features picked out in red and gold. Black and white photographs of the auditorium around the turn-of-the-century appear to show that all these colours have gone in the 1894 refurbishment. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/wallDecoration.jpg" alt="Wall Decoration." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Ceiling Light</h3>
+							        <p>
+							        	When the cinema opened as a magic lantern theatre in 1848, it would have had no electric light. The primary means of lighting the theatre was from a skylight. This was covered by movable shutters during daytime performances and which enabled the theatre 'in an instant to restore the light again for the general promenade of the public'. The skylight was covered during the 1926 re-build as additional classrooms were added overhead. An electric light was therefore installed in the ceiling instead. 
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/CeilingLight.jpg" alt="Ceiling Light." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Floor</h3>
+							        <p>
+							        	The floor level of the 1848 theatre was lower, with the seating descending from the entrance to the stage. Underneath the stage was a pit that was used to create the 'Pepper's Ghost' illusion. The floor was levelled when Quintin Hogg purchased the building, and then raised further during the 1894 re-build, reducing the height of the auditorium from 50ft to 30ft.  
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Floor.jpg" alt="Floor." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Stage</h3>
+							        <p>
+							        	The magic lantern slides used at the Royal Polytechnic Institution were larger than usual slides, at around 20cm x 15cm. The image was projected onto a circular oil canvas screen with a diameter of almost 9m, at a distance of 11m from the back of the theatre. This was achieved through the use of oxyhydrogen - or limelight as it was commonly known. The special large format slides enabled a clear and detailed image to be seen on the screen, even at this size and distance.  
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/Stage.jpg" alt="Stage." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Projection room</h3>
+							        <p>
+							        	The original 1848 projection or 'manipulating room' was at the back of the auditorium, between the two levels of seating. This was used for projecting Magic Lantern slides onto a large circular screen on the stage. The projecting room was removed during the 1894 refurbishment. When the Lumiere's Cinematographe was exhibited in 1896, it was projected from the floor of the auditorium onto a temporary screen. The projection room above the balcony was installed during the 1926 rebuild. In order to achieve clear sight lines, part of the original iron girders in the ceiling had to be removed.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/ProjectionRoom.JPG" alt="Projection Room." height="200px" width="366px">
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Iron Railings</h3>
+							        <p>
+							        	In 1894 a gallery was installed around the auditorium. This replaced the original tiered seating of the 1848 theatre and turned it more into a meeting hall for lectures, debates, teaching and even boxing. By 1926 the majority of the gallery was removed, in favour of the balcony we see today. However, for reasons that are not clear, the portion behind the stage was left, giving us a glimpse into the past.
+							        </p>
+							        <img class="PointsOfInterestImage" src="res/img/ironRailings.jpg" alt="Iron railing behind the stage." height="200px" width="366px">
+							    </div>
+							</div><!-- end of accordion 2 -->
+						</div>
+					</div>
+				</div>
+			</div><!-- /main -->
+			<div data-role="footer" data-position="fixed">
+				<!-- Footer HTML should go here -->
+				<div class="footer_text" style="background-color: white;">
+					<a href="#WordSearchPage">Word Search</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Upcoming events by devesh -->
+		<div data-role="page" data-theme="a" id="UpcomingEventsPage">
+			<!-- a page is a view in mobile app terms -->
+			<div data-role="header" data-position="fixed" data-theme="a" id="header">
+				<!-- Header HTML should go here -->
+				<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+				<button class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-bars menuButton" style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+				<div data-role="navbar" id="navMenuEvents1">
+				    <ul>
+				        <li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+		                <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+		                <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+		                <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+		                <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+		                <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+				    </ul>
+				</div><!-- /navbar -->
+			</div>
+			<div role="main" class="ui-content">
+				<!-- main content HTML should go here -->
+				<div class="IpadPageContent">
+					<h1 id="EventsPageTitle">Upcoming Events</h1>
+					<div data-role="tabs" id="tabs" width="190" height="27">
+						<div data-role="navbar">
+							<ul>
+								<li><a href="#UEpublic" data-ajax="false" class="ui-btn-active">Public</a></li>
+								<li><a href="#UEstudent" data-ajax="false">Student</a></li>
+							</ul>
+						</div>
+									
+						<div id="UEstudent">
+							<!-- Event 1 -->
+							<div>
+								<h3>Halloween Marathon</h3>
+								<div class="floatR">
+									<p>
+									Halloween Marathon featuring old classics in the Horror genre such as Norferatu and modern films including The Ring and Dead Silence.
+									</br></br>
+									Be prepared for the fright of your life!
+									</p>
+									<div>
+										<fieldset data-role="controlgroup" data-type ="horizontal" style="width: 25px; display: inline-block;">
+											<input type= "checkbox" id="checkbox1" style="left:0; margin: -1px 0 0 0; position:relative;"> 
+										</fieldset>
+										tap to add to favourites.
+									</div>
+									<div class="timeBox">
+										Oct 28 - 31 &nbsp; 18:00 - 22:00
+									</div>
+									<button style="width: 120px; height:35px; margin: 0 0 5px 80px; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="studentHalloweenEvent">Book Event</button>
+								</div>
+								<div>
+									<img src="res/img/RegentStC-Event1.png" class="eventPic">
+								</div>
+							</div> 
+			  				<hr>
+
+							<!-- Event 2 -->
+							<div>
+								<h3>UoW Anime Event</h3>
+								<div class="floatR">
+									<p>
+										University of Westminister's Anime Society is holding an evening of entertainment with several films from Studio Ghibli.
+										</br></br>
+										Non-society members welcome.
+									</p>
+									<div>
+										<fieldset data-role="controlgroup" data-type ="horizontal" style="width: 25px; display: inline-block;">
+											<input type= "checkbox" id="checkbox2" style="left:0; margin: -1px 0 0 0; position:relative;"> 
+										</fieldset>
+										tap to add to favourites.
+									</div>
+									<div class="timeBox">
+										Nov 5 &nbsp; 15:00 - 19:00
+									</div>
+									<button style="width: 120px; height:35px; margin: 0 0 5px 80px; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="studentAnimeEvent">Book Event</button>
+
+								</div>
+								<div>
+									<img src="res/img/RegentStC-Event2.png" class="eventPic">
+								</div>
+			  				</div> 
+							<hr>
+
+							<!-- Event 3 -->
+							<div>
+								<h3>UoW Concert</h3>
+								<div class="floatR">
+									<p>
+										University of Westminister's Music Society will be performing this evening. The Polyphonics, the Ochestra Society to perform and many more.
+										</br></br>
+										Join us for an evening of music!
+									</p>
+									<div>
+										<fieldset data-role="controlgroup" data-type ="horizontal" style="width: 25px; display: inline-block;">
+											<input type= "checkbox" id="checkbox3" style="left:0; margin: -1px 0 0 0; position:relative;"> 
+										</fieldset>
+										tap to add to favourites.
+									</div>
+									<div class="timeBox">
+										Nov 24 &nbsp; 18:00 - 23:00
+									</div>
+									<button style="width: 120px; height:35px; margin: 0 0 5px 80px; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="studentConcertEvent">Book Event</button>
+
+								</div>
+								<div>
+									<img src="res/img/RegentStC-Event3.png" class="eventPic">
+								</div>
+			  				</div> 
+							<hr>
+
+							<!-- Event 4 -->
+							<div>
+								<h3>Movie Night</h3>
+								<div class="floatR">
+									<p>
+										Showing films from various genres for the ultimate movie night. Films to be shown include Despicable Me and Hunger Games.
+										</br></br>
+										Join us for the evening!
+									</p>
+									<div>
+										<fieldset data-role="controlgroup" data-type ="horizontal" style="width: 25px; display: inline-block;">
+											<input type= "checkbox" id="checkbox4" style="left:0; margin: -1px 0 0 0; position:relative;"> 
+										</fieldset>
+										tap to add to favourites.
+									</div>
+									<div class="timeBox">
+										Nov 28 - 29 &nbsp; 18:00 - 23:00
+									</div>
+									<button style="width: 120px; height:35px; margin: 0 0 5px 80px; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="studentMovieNightEvent">Book Event</button>
+
+								</div>
+								<div>
+									<img src="res/img/RegentStC-Event4.png" class="eventPic">
+								</div>
+			  				</div> 
+							<hr>
+
+							<!-- Event End -->
+			  				<div>
+			  					<!--<h1 class="theEnd">The End</h1> -->
+			  					<!-- newsletter code -->
+			  					<p>
+			  						Please sign up for our newsletter to get updates on our upcoming events:<br>
+					              	<input name="emailNewsletterStudent" id="emailNewsletterStudent" value="" type = "email" placeholder="example@domain.com" >
+					            </p>
+					            <button style="margin: 0 auto; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="newsletterButtonStudent">Subscribe</button>
+			  				</div>
+						</div> <!-- UEstudent Closing Tag-->
+						<div id="UEpublic">
+							<!-- PUBLIC PAGE -->
+							<!-- Event 1 -->
+							<div>
+								<h3>Halloween Marathon</h3>
+								<div class="floatR">
+									<p>
+										Halloween Marathon featuring old classics in the Horror genre such as Norferatu and modern films including The Ring and Dead Silence.
+										</br></br>
+										Be prepared for the fright of your life!
+									</p>
+									<div>
+										<fieldset data-role="controlgroup" data-type ="horizontal" style="width: 25px; display: inline-block;">
+											<input type= "checkbox" id="checkbox5" style="left:0; margin: -1px 0 0 0; position:relative;"> 
+										</fieldset>
+										tap to add to favourites.
+									</div>
+									<div class="timeBox">
+										Oct 28 - 31 &nbsp; 18:00 - 22:00
+									</div>
+									<button style="width: 120px; height:35px; margin: 0 0 5px 80px; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="publicHalloweenEvent">Book Event</button>
+								</div>
+								<div>
+									<img src="res/img/RegentStC-Event1.png" class="eventPic">
+								</div>
+							</div> <!-- Halloween Marathon Closing Tag-->
+							<hr>
+							<!-- Event 4 -->
+							<div>
+								<h3>Movie Night</h3>
+								<div class="floatR">
+									<p>
+										Showing films from various genres for the ultimate movie night. Films to be shown include Despicable Me and Hunger Games.
+										</br></br>
+										Join us for the evening!
+									</p>
+									<div>
+										<fieldset data-role="controlgroup" data-type ="horizontal" style="width: 25px; display: inline-block;">
+											<input type= "checkbox" id="checkbox6" style="left:0; margin: -1px 0 0 0; position:relative;"> 
+										</fieldset>
+										tap to add to favourites.
+									</div>
+									<div class="timeBox">
+										Nov 28 - 29 &nbsp; 18:00 - 22:00
+									</div>
+									<button style="width: 120px; height:35px; margin: 0 0 5px 80px; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="publicMovieNightEvent">Book Event</button>
+
+								</div>
+								<div>
+									<img src="res/img/RegentStC-Event4.png" class="eventPic">
+								</div>
+								</div> <!-- Movie Night Closing Tag-->
+							<hr>
+							<!-- Event End -->
+							<div>
+								
+								<p>
+									Please sign up for our newsletter to get updates on our upcoming events:<br>
+						      		<input name="emailNewsletterPublic" id="emailNewsletterPublic" value="" type = "email" placeholder="example@domain.com" >
+						    	</p>
+						    	<button style="margin: 0 auto; padding: 0 0 0 0; background-color: #741b47; color: white; border-color: #741b47;" id="newsletterButtonPublic">Subscribe</button>
+							</div>
+			  			</div> <!-- UEpublic Closing Tag-->
+					</div><!-- Close Tab Div -->
+				</div>
+			</div> <!-- Page "Main Content" Closing Tag -->
+			<div data-role="footer" data-position="fixed">
+				<!-- Footer HTML should go here -->
+				<div class="footer_text" style="background-color: white;"><a href="#favourites">* My Favourites</a></div>
+			</div>		
+		</div> <!-- Page Closing Tag -->
+
+		<!-- Favourites Page by devesh -->
+		<div data-role="page" data-theme="a" id="favourites">
+			<!-- a page is a view in mobile app terms -->
+			<div data-role="header" data-position="fixed" data-theme="a" id="header" >
+				<!-- Header HTML should go here -->
+				<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+				<button 
+				class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+				ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+				style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+				<div data-role="navbar" id="navMenuEvents2">
+				    <ul>
+				        <li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+		                <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+		                <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+		                <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+		                <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+		                <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+				    </ul>
+				</div><!-- /navbar -->
+			</div>
+			<div role="main" class="ui-content">
+				<!-- main content HTML should go here -->
+			<a href="#UpcomingEventsPage" class="footer-button-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background-color: #741b47; color: white; border-color: #741b47;">Back</a>
+				<div class="IpadPageContent">
+					<h1>Favourite Events</h1>
+					<div id="favourites-content"> 
+					</div>
+					<p>
+						Want us to send you updates on your favourite events? Subscribe now:<br>
+						<input name="favouritesEmail" id="favouritesEmail" value="" type = "email" placeholder="example@domain.com" >
+					</p>
+					<button style="background-color: #741b47; color: white; border-color: #741b47;" type="button" id="favouritesEmailButton">Email Me Updates?</button>
+	   			</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<!-- Footer HTML should go here -->
+				<div class="footer_text" style="background-color: white;"><a href="#FindUsPage">Find Us</a></div>
+			</div>
+		</div><!-- /upcomingevents favourites page -->
+
+		<!-- third page -->
+	    <div data-role="page" data-theme="a" id="EventConfirmationPage">
+	    	<!-- a page is a view in mobile app terms -->
+	      	<div data-role="header" data-position="fixed" data-theme="a" id="header">
+        	<!-- Header HTML should go here -->
+        	<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+        	<button
+	        class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+	        ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+	        style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+			<div data-role="navbar" id="navMenuConfirmationEvent">
+			    <ul>
+			        <li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+	                <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+	                <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+	                <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+	                <li><a onclick="hideNavMenu()" href="#ContactUsPage" data-transition="slide">Contact Us</a></li>
+	                <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+			    </ul>
+			</div><!-- /navbar -->
+	      </div>
+	      <div role="main" class="ui-content">
+	        <!-- main content HTML should go here -->
+	        <div class="IpadPageContent">
+	          <h1 id="ConfirmationTitle">Event Booking: Confirmation</h1>
+	          <div id="confirmationBox" style="border: 3px solid black; width: 600px; padding: 5px 10px 10px 10px; margin-top: 20px;">
+	            <h3>Success!</h3>
+	            <p>
+	              Thank you for booking an event with the Regent Street Cinema.
+	            </p>
+	            <p>
+	              Your order confirmation code is: <a href="#">#204-4981088-5481158</a>
+	            </p>
+	            <br>
+	            <p>
+	              Please don't forget to bring this code with you to the event.
+	            </p>
+	            <p>Thank you</p>
+	            <p>Signed: A. Signature</p>
+	            <img src="res/img/ASignature.jpg" height="62px" width="314px">
+	          </div>
+	        </div>
+	      </div><!-- /main -->
+	      <div data-role="footer" data-position="fixed">
+	        <!-- Footer HTML should go here -->
+	        <div class="footer_text" style="background-color: white;">
+	          <a href="#UpcomingEventsPage" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-back" style="background-color: #741b47; color: white; border-color: #741b47; margin-left: 620px;">Upcoming Events</a>
+	        </div>
+	      </div>
+	    </div>
+
+		<!-- Contact Us page -->
+		<div data-role="page" data-theme="a" id="ContactUsPage">
+			<!-- a page is a view in mobile app terms -->
+			<div data-role="header" data-position="fixed" data-theme="a" id="header">
+				<!-- Header HTML should go here -->
+				<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+				<button 
+				class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+				ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+				style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+				<div data-role="navbar" id="navMenuCUS">
+				    <ul> 
+				    	<li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+				        <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+				        <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+				        <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+				        <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+				        <li><a onclick="hideNavMenu()" href="#FindUsPage" data-transition="slide">Find Us</a></li>
+				    </ul>
+				</div><!-- /navbar -->
+			</div>
+			<div role="main" class="ui-content">
+				<!-- main content HTML should go here -->
+				<div class="IpadPageContent">
+					<h1 id="HomepageTitle">Contact Us</h1>
+					<div>
+						<p>
+							Please get in touch to find out more about any aspect of the Regent Street Cinema or to discuss opportunities to support the campaign.
+						</p>
+						<div id="twitterContactUs">
+							<img id="twitterIcon" src="res/img/twitter.png">	
+							<p>Follow us on Twitter <a href="https://twitter.com/regentstcinema">@RegentStCinema</a></p>
+						</div>
+						<p>
+							<strong>General enquiries</strong><br>
+							Lynda Knill<br>
+							Interim Manager of Development<br>
+							<br>
+							University of Westminster<br>
+							Development Office<br>
+							Cavendish House 2nd Floor<br>
+							101 New Cavendish Street<br>
+							London<br>
+							W1W 6XH<br>
+							<br>
+							T: +44 (0)20 7911 5741<br>
+							E: development@westminster.ac.uk<br>
+							<br>
+							<strong>Press enquiries</strong><br>
+							<a href="http://www.broadgatemainland.com/">Broadgate Mainland</a><br>
+							<br>
+							Sarah Evans-Toyne, Lianne Robinson, Chiara Barreca<br>
+							<br>
+							Tel: +44(0)20 7726 6111<br>
+							<br>
+							Email: westminster@broadgatemailand.com<br>
+						</p>
+						<div id="mapToFindUs">
+							<a href="#FindUsPage"><img src="res/img/mapIcon.png" width="320" height="200"></a>
+						</div>
+						<p>
+							<a href="http://www.premiercomms.com/">Premier Public Relations</a><br>
+							<br>
+							Tina McFarling, Judy Lipsey<br>
+							<br>
+							Tel: +44(0) 20 7292 8366<br>
+						</p>
+						<a href="mailto:development@westminster.ac.uk"><img id="supportButton" src="res/img/Support.png" width="100" height="30"></a>
+					</div>			
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<!-- Footer HTML should go here -->
+				<div class="footer_text" style="background-color: white;"><a href="#FindUsPage">Find Us</a></div>
+			</div>
+		</div>
+
+		<!-- Find Us page -->
+		<div data-role="page" data-theme="a" id="FindUsPage">
+			<!-- a page is a view in mobile app terms -->
+			<div data-role="header" data-position="fixed" data-theme="a" id="header">
+				<!-- Header HTML should go here -->
+				<img id="logo"  src="res/img/logo.png" alt="regents street cinema logo." height="42px" width="366px">
+
+				<button
+				class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini
+				ui-corner-all ui-btn-icon-right ui-icon-bars menuButton"
+				style="background-color: #741b47; color: white; border-color: #741b47; margin-top: 13px;" height="100px" width="100px">Menu</button>
+
+				<div data-role="navbar" id="navMenuFUS">
+				    <ul>
+				    	<li><a onclick="hideNavMenu()" href="#HomePage" data-transition="slide">Home</a></li>
+				        <li><a onclick="hideNavMenu()" href="#OurCinemaPage" data-transition="slide">Our Heritage</a></li>
+				        <li><a onclick="hideNavMenu()" href="#NameSeat1" data-transition="slide">Name a Seat</a></li>
+				        <li><a onclick="hideNavMenu()" href="#UpcomingEventsPage" data-transition="slide">Upcoming Events</a></li>
+				        <li><a onclick="hideNavMenu()" href="#WordSearchPage" data-transition="slide">Word Search</a></li>
+				        <li><a onclick="hideNavMenu()" href="#ContactUsPage">Contact Us</a></li>
+				    </ul>
+				</div><!-- /navbar -->
+			</div>
+			<div role="main" class="ui-content">
+				<!-- main content HTML should go here -->
+				<div class="IpadPageContent">
+					<h1 id="FindUsTitle">Find Us</h1>
+
+					<div data-role="tabs" id="tabs" width="190" height="27">
+						<div data-role="navbar">
+							<ul>
+								<li><a href="#gMapTab" data-ajax="false" class="ui-btn-active">Google Maps</a></li>
+								<li><a href="#sMapTab" data-ajax="false">Static Map</a></li>
+							</ul>
+						</div>
+						<div id="gMapTab">
+							<iframe height="592" width="692" frameborder="0" style="border:0" id="map"
+									src="https://www.google.com/maps/embed/v1/place?q=University%20Of%20Westminster%2C%20Regent%20Street%2C%20London%2C%20United%20Kingdom&key=AIzaSyDpEg5_-DhNCqFGMbyYUaJEZKuZtKkzwn8"></iframe>
+							<div id="gmapsInput">
+								<p>
+									<span>Current Location: </span>
+									<input id="clInput" name="Location" value="" type ="text" placeholder="postcode">
+								</p>
+								<button id="go" style="background-color: #741b47; color: white; border-color: #741b47;">Go</button>
+							</div>
+							<p>
+								University of Westminster<br>
+								309 Regent Street<br>
+								London<br>
+								W1B 2HW<br>
+							</p>
+						</div>
+						<div id="sMapTab">
+							<img src="res/img/staticMap.png" alt="Map of central London." height="592" width="692">
+							<p>
+								University of Westminster<br>
+								309 Regent Street<br>
+								London<br>
+								W1B 2HW<br>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- /main -->
+			<div data-role="footer" data-position="fixed">
+				<!-- Footer HTML should go here -->
+				<div class="footer_text" style="background-color: white;">
+					<a href="#ContactUsPage" style="padding-right: 20px;">Contact Us</a>
+					<a href="#UpcomingEventsPage">Upcoming Events</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- JavaScript to control favouriting feature - devesh-->
+	<script>
+		$(document).on("pagecontainerbeforeshow", function( event, ui) {
+
+		  if (ui.toPage.is("#favourites") ) {
+		    //alert( "doing Somthing" );
+
+		    //if the first checkbox is checked
+		    if ( $("#checkbox1").is(":checked") ) {
+
+		      $("#favourites-content").html("<h3>Halloween Marathon</h3>");
+		      $("#favourites-content").append('<img src="img/RegentStC-Event1.png" class="eventPic">');
+		      $("#favourites-content").append("<p>Halloween Marathon featuring old classics in the Horror genre such as Norferatu and modern films including The Ring and Dead Silence.</br></br> Be prepared for the fright of your life!</p>");
+		        $("#favourites-content").append("<hr>");
+		    									  } 
+		    else {
+		      $("#favourites-content").html( "" );
+		    	 }
+		    if ( $("#checkbox2").is(":checked") ) {
+
+		      $("#favourites-content").append("<h3>UoW Anime Event</h3>");
+		      $("#favourites-content").append('<img src="img/RegentStC-Event2.png" class="eventPic">');
+		      $("#favourites-content").append("<p>University of Westminister's Anime Society is holding an evening of entertainment with several films from Studio Ghibli.</br></br> Non-society members welcome.</p>");
+		      $("#favourites-content").append("<hr>");
+		    									  } 
+		    if ( $("#checkbox3").is(":checked") ) {
+
+		      $("#favourites-content").append("<h3>UoW Concert</h3>");
+		      $("#favourites-content").append('<img src="img/RegentStC-Event3.png" class="eventPic">');
+		      $("#favourites-content").append("<p>University of Westminister's Music Society will be performing this evening. The Polyphonics, the Ochestra Society to perform and many more.</br></br> Join us for an evening of music!</p>");
+		      $("#favourites-content").append("<hr>");
+		      									  }
+		    if ( $("#checkbox4").is(":checked") ) {
+
+		      $("#favourites-content").append("<h3>Movie Night</h3>");
+		      $("#favourites-content").append('<img src="img/RegentStC-Event4.png" class="eventPic">');
+		      $("#favourites-content").append("<p>Showing films from various genres for the ultimate movie night. Films to be shown include Despicable Me and Hunger Games.</br></br> Join us for the evening!</p>");
+		      $("#favourites-content").append("<hr>");
+		      									  }
+		    if ( $("#checkbox5").is(":checked") ) {
+
+		      $("#favourites-content").html("<h3>Halloween Marathon</h3>");
+		      $("#favourites-content").append('<img src="img/RegentStC-Event1.png" class="eventPic">');
+		      $("#favourites-content").append("<p>Halloween Marathon featuring old classics in the Horror genre such as Norferatu and modern films including The Ring and Dead Silence.</br></br> Be prepared for the fright of your life!</p>");
+		        $("#favourites-content").append("<hr>");
+		    									  }
+		    if ( $("#checkbox6").is(":checked") ) {
+
+		      $("#favourites-content").append("<h3>Movie Night</h3>");
+		      $("#favourites-content").append('<img src="img/RegentStC-Event4.png" class="eventPic">');
+		      $("#favourites-content").append("<p>Showing films from various genres for the ultimate movie night. Films to be shown include Despicable Me and Hunger Games.</br></br> Join us for the evening!</p>");
+		      $("#favourites-content").append("<hr>");
+		      }
+		  	}
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready (function(){
+			$('#submit').click(function(){
+				alert("Somthing happened");
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		// newsletter js
+
+		$(document).ready (function(){
+
+		 	$('#newsletterButtonStudent').click(function(){
+		 		var emailNLS = "" + $('#emailNewsletterStudent').val();
+		   		document.location.href = "mailto:" + emailNLS + "?subject=Regent Street Cinema Upcoming Events News Letter&body=Halloween Marathon%0AHalloween Marathon featuring old classics in the Horror genre such as Norferatu and modern films including The Ring and Dead Silence. Be prepared for the fright of your life!%0ATime: Oct 28 - 31 18:00 - 22:00%0A%0A UoW Anime Event %0AUniversity of Westminister's Anime Society is holding an evening of entertainment with several films from Studio Ghibli. Non-society members welcome. %0ATime: Nov 5 15:00 - 19:00%0A%0A UoW Concert %0AUniversity of Westminister's Music Society will be performing this evening. The Polyphonics, the Ochestra Society to perform and many more. Join us for an evening of music! %0ATime: Nov 24 18:00 - 23:00%0A%0A Movie Night %0AShowing films from various genres for the ultimate movie night. Films to be shown include Despicable Me and Hunger Games. Join us for the evening!%0ATime: Nov 28 - 29 18:00 - 23:00	";
+		 	});
+
+			$('#newsletterButtonPublic').click(function(){
+		 		var emailNLP = "" + $('#emailNewsletterPublic').val();
+		   		document.location.href = "mailto:" + emailNLP + "?subject=Regent Street Cinema Upcoming Events News Letter&body=Halloween Marathon%0AHalloween Marathon featuring old classics in the Horror genre such as Norferatu and modern films including The Ring and Dead Silence. Be prepared for the fright of your life!%0ATime: Oct 28 - 31 18:00 - 22:00%0A%0A Movie Night %0AShowing films from various genres for the ultimate movie night. Films to be shown include Despicable Me and Hunger Games. Join us for the evening!%0ATime: Nov 28 - 29 18:00 - 23:00	";
+		 	});
+
+		 	$('#favouritesEmailButton').click(function(){
+		 		var emailFav = "" + $('#favouritesEmail').val();
+		 		var headingAR = [];
+		 		var paraAR = [];
+		 		/* add email checking so no empty input
+ 				 * when the user wants to get their favourite events emailed to them
+		 		 */
+				var faveventsHeader = $("#favourites-content").find("h3");
+				if (faveventsHeader.length > 0) {
+					for (var i = 0; i < faveventsHeader.length; i++) {
+						headingAR.push(faveventsHeader[i].innerHTML);
+					};
+				};
+				
+				var faveventsParagraph = $("#favourites-content").find("p");;
+				if (faveventsParagraph.length > 0) {
+					$("#favourites-content").find("p").each(function(index) {
+						paraAR.push($(this).text());
+					});
+				};
+
+				var emailContent = "";
+
+				for (var j = 0; j < headingAR.length; j++) {
+					emailContent = emailContent.concat(headingAR[j] + "%0A" + paraAR[j] + "%0A%0A");
+				};
+
+				//console.log(emailContent);
+				document.location.href = "mailto:" + emailFav + "?subject=Regent Street Cinema favourite Upcoming Events&body=" + emailContent;
+
+				//console.log(headingAR);
+				//console.log(paraAR);
+		 	});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var handler = StripeCheckout.configure({
+	        	key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+		        token: function(token) {
+		          	// Use the token to create the charge with a server-side script.
+		          	// You can access the token ID with `token.id`
+
+		          	//This will be printed when the transaction is successful. To charge, server side scripting is required.
+		          	if(token.id){
+		            	document.location.href = "#EventConfirmationPage";	
+		          	}
+		        }
+	      	});
+
+			$('#publicHalloweenEvent').click(function(){
+				//console.log("public Halloween event");
+				// Open Checkout with further options
+	        	handler.open({
+	          		name: 'Event Booking',
+	          		currency: 'gbp',
+	          		description: "1 Ticket to Halloween Marathon Event.",
+	          		amount: 2500
+	        	});	
+
+			});
+
+			$('#publicMovieNightEvent').click(function(){
+				//console.log("public Movie Night event");
+
+				handler.open({
+	          		name: 'Event Booking',
+	          		currency: 'gbp',
+	          		description: "1 Ticket to Movie Night Event.",
+	          		amount: 2000
+	        	});	
+			});
+
+			$('#studentHalloweenEvent').click(function(){
+				//console.log("student Halloween event");
+				handler.open({
+	          		name: 'Event Booking',
+	          		currency: 'gbp',
+	          		description: "1 Student Ticket to Halloween Marathon Event.",
+	          		amount: 1500
+	        	});	
+			});
+
+			$('#studentAnimeEvent').click(function(){
+				//console.log("student Anime event");
+				handler.open({
+	          		name: 'Event Booking',
+	          		currency: 'gbp',
+	          		description: "1 Student Ticket to UoW Anime Event.",
+	          		amount: 1799
+	        	});
+			});
+
+			$('#studentConcertEvent').click(function(){
+				//console.log("student Concert event");
+				handler.open({
+	          		name: 'Event Booking',
+	          		currency: 'gbp',
+	          		description: "1 Student Ticket to UoW Concert Event.",
+	          		amount: 2250
+	        	});
+			});
+
+			$('#studentMovieNightEvent').click(function(){
+				//console.log("student Movie Night event");
+				handler.open({
+	          		name: 'Event Booking',
+	          		currency: 'gbp',
+	          		description: "1 Student Ticket to Movie Night Event.",
+	          		amount: 1000
+	        	});
+			});
+
+	      	// Close Checkout on page navigation
+	      	$(window).on('popstate', function() {
+	        	handler.close();
+	      	});
+
+		});
+	</script>
+	</body>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/nameSeat.js"></script>
+	<script type="text/javascript" src="js/wordSearch.js"></script>
+</html>					

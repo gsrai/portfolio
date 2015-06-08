@@ -1,0 +1,17 @@
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\bin\Release\LudoStandAlone.exe.config
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\obj\Release\LudoStandAlone.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\obj\Release\LudoStandAlone.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\bin\Release\LudoStandAlone.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\bin\Release\LudoStandAlone.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\obj\Release\LudoStandAlone.LudoForm.resources
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\obj\Release\LudoStandAlone.Properties.Resources.resources
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoStandAlone\obj\Release\LudoClient.csproj.GenerateResource.Cache
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\bin\Release\LudoClient.exe.config
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\bin\Release\LudoClient.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\bin\Release\LudoClient.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\obj\Release\LudoClient.Properties.Resources.resources
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\obj\Release\LudoClient.csproj.GenerateResource.Cache
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\obj\Release\LudoClient.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\obj\Release\LudoClient.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\obj\Release\LudoClient.LudoForm.resources
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoClient\LudoClient\bin\Release\PlayerTokenClassLibrary.dll

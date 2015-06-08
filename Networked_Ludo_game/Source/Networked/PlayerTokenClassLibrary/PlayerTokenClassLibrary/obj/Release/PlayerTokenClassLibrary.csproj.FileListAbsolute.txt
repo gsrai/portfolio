@@ -1,0 +1,5 @@
+c:\users\gagandeep\documents\visual studio 2013\Projects\PlayerTokenClassLibrary\PlayerTokenClassLibrary\bin\Release\PlayerTokenClassLibrary.dll
+c:\users\gagandeep\documents\visual studio 2013\Projects\PlayerTokenClassLibrary\PlayerTokenClassLibrary\bin\Release\PlayerTokenClassLibrary.pdb
+c:\users\gagandeep\documents\visual studio 2013\Projects\PlayerTokenClassLibrary\PlayerTokenClassLibrary\obj\Release\PlayerTokenClassLibrary.dll
+c:\users\gagandeep\documents\visual studio 2013\Projects\PlayerTokenClassLibrary\PlayerTokenClassLibrary\obj\Release\PlayerTokenClassLibrary.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\PlayerTokenClassLibrary\PlayerTokenClassLibrary\obj\Release\PlayerTokenClassLibrary.csprojResolveAssemblyReference.cache

@@ -1,0 +1,374 @@
+/*
+ * Mobile UX main style sheet.
+ * Gagondeep Srai
+ */
+
+/*
+ * Header Styling
+ * header is the nav bar or data-role="header" element
+ */
+#header {
+	background-color: #741B47;
+	color: white;
+	height: 65px;
+	width: auto;
+}
+
+/*
+ * Logo Styling
+ */
+#logo {
+  float: left;
+  margin: 5px;
+  padding: 5px;
+}
+
+/*
+ * Navigation menu Styling
+ */
+
+#navMenu {
+	display: none;
+    background-color: #4C1130;
+}
+#navMenuHome {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuOC {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuNAS1 {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuNAS2 {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuNAS3 {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuPOI {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuCUS {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuFUS {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuEvents1 {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuEvents2 {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuWord {
+	display: none;
+    background-color: #4C1130;
+}
+
+#navMenuConfirmationEvent {
+	display: none;
+    background-color: #4C1130;
+}
+
+/*
+ * Menu button Styling
+ * 
+ */
+.menuButton {
+	
+	float: right;
+}
+
+/*
+ * Main UI Content Styling 
+ */
+
+/* 
+ * Homepage style 
+ */
+#HomepageTitle {
+	margin: 0 0 0 0;
+}
+
+/* this class is for all ipad content, it aligns it all in the center */
+.IpadPageContent {
+	width: 700px;
+	margin: 0 auto;
+	/*text-align: center; */
+}
+
+#homepageParagraphButton {
+	text-decoration: none;
+}
+
+#homepageSlider {
+	width: 315px;
+	height: 200px;
+	overflow: hidden;
+	margin-right: 0px;
+}
+
+#homepageSlider .slides {
+	display: block;
+	width: 1260px;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+}
+
+#homepageSlider .slide {
+	float: left;
+	list-style-type: none;
+	width: 315px;
+	height: 200px;
+}
+
+
+/* 
+ * Contact Us
+ */
+#twitterContactUs {
+	float: right;
+}
+
+#mapToFindUs {
+	float: right;
+}
+
+#twitterIcon {
+	margin-left: 90px;
+}
+
+#supportButton {
+	margin-left: 30px;
+}
+
+/* 
+ * Find Us
+ */
+#FindUsTitle {
+	margin: 0 0 0 0;
+}
+
+#sMapTab {
+	margin-top: 10px;
+}
+
+#gMapTab {
+	margin-top: 10px;
+}
+
+#gmapsInput {
+	width: 250px;
+	float: right;
+}
+
+/* 
+ * Points of interest
+ */
+.PointsOfInterestImage {
+	padding-left: 145px;
+	margin: 0 auto;
+}
+
+/* 
+ * Our Cinema
+ */
+
+#OurCinemaTitle {
+	margin: 0 0 0 0;
+}
+
+#SliderWidget {
+	width: 600px;
+	height: 400px;
+	margin-left: 50px;
+	margin-top: 5px;
+	overflow: hidden;
+	position: relative;
+}
+
+#SliderWidget .slides {
+	display: block;
+	width: 11400px; /* 600 (width) * 19 (slides) */
+	height: 400px;
+	margin: 0;
+	padding: 0;
+}
+
+#SliderWidget .slide {
+	float: left;
+	list-style-type: none;
+	width: 600px;
+	height: 400px;
+}
+
+#sliderBtnLeft {
+	top: 170px;
+	left: 0;
+	z-index: 9999;
+	position: absolute;
+} 
+
+#sliderBtnRight {
+	top: 170px;
+	right: 0;
+	z-index: 9999;
+	position: absolute;
+}
+
+#sliderTitle {
+	margin: 0;
+	padding: 0;
+	bottom: 2px;
+	left: 10px;
+	z-index: 9999;
+	position: absolute;
+	color: red;
+	font-family: "Times New Roman", Arial, "Comic Sans MS"; 
+}
+
+#sliderText {
+	margin: 10px 70px 0px 70px;
+	font-size: 16px;
+	min-height: 80px; /* stops element from resizing and shifting the content around. */
+
+}
+
+/* 
+ * Name a seat
+ */
+
+#NameASeatTitle {
+	margin: 0 0 0 140px;
+}
+
+#ConfirmationTitle {
+	margin: 0 0 0 0px;
+}
+
+#SeatingPlanText {
+	float: right;
+	width: 120px;
+	margin-top: 40px;
+	margin-right: 100px;
+}
+
+#SeatingPlanImg {
+	margin-left: 40px;
+}
+
+.seat {
+	margin: 5px 5px 5px 5px;
+	color: white;
+	text-align: center;
+	display: inline-block;
+}
+
+.seatAvailable {
+	background-color: green;
+}
+
+.seatUnavailable {
+	background-color: red;	
+}
+
+.seatSelected {
+	background-color: yellow;	
+}
+
+
+/*
+ * Footer Styling
+ */
+
+.footer_text {
+	font-family: "Times New Roman", Arial, "Comic Sans MS";
+	text-align: center;
+}
+
+
+/*
+ * body Styling affects everything
+ * font family?
+ */
+body {
+
+}
+
+/*
+ * Mobile UX main style sheet.
+ * Devesh Rathod
+ *
+ 
+ *
+ * Upcoming Events Event Styling
+ * Div Text Border CSS
+ */
+
+#EventsPageTitle {
+	margin: 0 0 0 0;
+}
+
+.eventPic {
+	width: 300px;
+	border: 6px solid black;
+}
+
+.favEvent {
+	width: 60px;
+	position: absolute;
+	right: 290px;
+}
+
+.floatR {
+	padding: 50;
+	margin: 0;
+    float: right;
+    width: 370px;
+}
+
+.timeBox {
+	border: 3px solid black;
+	position: relative;
+	right: -44px;
+	width: 191px;
+	margin-bottom: 5px;
+}
+
+hr {
+    border-width: 3px;
+    width: 680px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.theEnd {
+	text-align: center;
+	font-weight: 900; /* 100 = lightest and 900 = thickest */
+ }
+
+
+/* changes the color of all active buttons */
+.ui-btn-active { color: white !important; background: none !important; background-color: #511332 !important;  }

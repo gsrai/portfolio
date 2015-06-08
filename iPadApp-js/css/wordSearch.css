@@ -1,0 +1,62 @@
+/* 
+ * Word Search CSS
+ */
+
+#WordSearchTitle {
+	margin: 0 0 0 140px;
+	text-decoration: underline;
+}
+
+
+.letter {
+	padding: 4px 4px 4px 4px;
+	color: black;
+	text-align: center;
+	display: inline-block;
+}
+
+.normalLetter {
+	background-color: white;
+	font-size: 20px;
+}
+
+.wordFound {
+	background-color: #741b47;
+	color: white;
+}
+
+.selectedLetter {
+	background-color: green;	
+}
+
+.viewArtefact {
+	text-decoration: none;
+}
+
+#viewDiv {
+	float: right;
+	
+}
+
+#wordsDiv {
+	padding-top: 2px;
+}
+
+#wordContainter {
+	padding-top: 20px;
+}
+
+#wordContainter p {
+	padding: 0;
+	margin: 0;
+}
+
+.ArtifactImage {
+	padding-left: 17px;
+	margin: 0 auto;
+}
+
+.ArtifactHeading {
+	padding-left: 150px;
+	margin: 0 auto;
+}

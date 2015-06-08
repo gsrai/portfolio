@@ -1,0 +1,9 @@
+c:\users\gagandeep\documents\visual studio 2013\Projects\LudoStandAlone\LudoStandAlone\bin\Debug\LudoStandAlone.exe.config
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\bin\Debug\LudoStandAlone.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\bin\Debug\LudoStandAlone.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\obj\Debug\LudoStandAlone.csprojResolveAssemblyReference.cache
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\obj\Debug\LudoStandAlone.Properties.Resources.resources
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\obj\Debug\LudoStandAlone.csproj.GenerateResource.Cache
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\obj\Debug\LudoStandAlone.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\obj\Debug\LudoStandAlone.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoStandAlone\LudoStandAlone\obj\Debug\LudoStandAlone.LudoForm.resources

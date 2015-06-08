@@ -1,0 +1,7 @@
+c:\users\gagandeep\documents\visual studio 2013\Projects\LudoServer\LudoServer\bin\Debug\LudoServer.exe.config
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoServer\LudoServer\obj\Debug\LudoServer.csprojResolveAssemblyReference.cache
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoServer\LudoServer\bin\Debug\LudoServer.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoServer\LudoServer\bin\Debug\LudoServer.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoServer\LudoServer\obj\Debug\LudoServer.exe
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoServer\LudoServer\obj\Debug\LudoServer.pdb
+C:\Users\Gagandeep\Documents\Visual Studio 2013\Projects\LudoServer\LudoServer\bin\Debug\PlayerTokenClassLibrary.dll
